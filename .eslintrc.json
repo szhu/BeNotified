@@ -1,0 +1,53 @@
+{
+  "extends": [
+    "prettier",
+    "eslint:recommended",
+    "plugin:consistent-default-export-name/fixed"
+  ],
+  "parser": "@typescript-eslint/parser",
+  "parserOptions": {
+    "ecmaVersion": "latest",
+    "project": "tsconfig.json",
+    "sourceType": "module"
+  },
+  "plugins": ["@typescript-eslint", "prefer-smart-quotes", "import"],
+  "root": true,
+  "rules": {
+    "@typescript-eslint/naming-convention": [
+      "error",
+      {
+        "format": ["strictCamelCase", "StrictPascalCase"],
+        "leadingUnderscore": "allow",
+        "selector": "variable",
+        "trailingUnderscore": "allow"
+      },
+      { "format": null, "modifiers": ["destructured"], "selector": "variable" },
+      {
+        "format": ["PascalCase"],
+        "prefix": ["is", "should", "has", "can", "did", "will"],
+        "selector": "variable",
+        "types": ["boolean"]
+      }
+    ],
+    "@typescript-eslint/no-floating-promises": "error",
+    "@typescript-eslint/no-unnecessary-condition": [
+      "error",
+      { "allowConstantLoopConditions": true }
+    ],
+    "@typescript-eslint/strict-boolean-expressions": [
+      "error",
+      {
+        "allowAny": true,
+        "allowNullableBoolean": true,
+        "allowNullableObject": true,
+        "allowNullableString": true
+      }
+    ],
+    "eqeqeq": ["error", "always", { "null": "ignore" }],
+    "import/extensions": ["error", "never"],
+    "no-undef": "off",
+    "no-unused-vars": "warn",
+    "no-useless-escape": "error",
+    "prefer-smart-quotes/prefer": ["error", "all"]
+  }
+}

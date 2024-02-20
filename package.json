@@ -1,0 +1,26 @@
+{
+  "private": true,
+  "dependencies": {
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0"
+  },
+  "devDependencies": {
+    "@types/chrome": "^0.0.260",
+    "@types/react": "^18.2.57",
+    "@types/react-dom": "^18.2.19",
+    "@typescript-eslint/eslint-plugin": "^7.0.2",
+    "eslint": "^8.52.0",
+    "eslint-config-prettier": "^8.8.0",
+    "eslint-plugin-consistent-default-export-name": "^0.0.15",
+    "eslint-plugin-import": "^2.29.1",
+    "eslint-plugin-jsx-a11y": "^6.7.1",
+    "eslint-plugin-prefer-smart-quotes": "^2.0.0",
+    "eslint-plugin-react": "^7.32.2",
+    "eslint-plugin-react-hooks": "^4.6.0",
+    "prettier": "3.2.5",
+    "prettier-plugin-organize-imports": "^3.2.2",
+    "prettier-plugin-packagejson": "^2.4.10",
+    "prettier-plugin-sort-json": "^3.1.0",
+    "typescript": "^5.3.3"
+  }
+}
