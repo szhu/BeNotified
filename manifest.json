@@ -11,7 +11,7 @@
     "128": "src/icon.png"
   },
   "manifest_version": 3,
-  "name": "Time to BeReal",
+  "name": "BeNotified",
   "permissions": ["alarms", "notifications", "storage"],
   "version": "1.0"
 }

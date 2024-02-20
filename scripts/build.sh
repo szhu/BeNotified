@@ -9,7 +9,7 @@ VERSION="$(node -p -e 'require("./manifest.json").version')"
 test -n "$VERSION"
 
 mkdir -p dist
-FILE="dist/time-to-bereal-chrome-${VERSION}.zip"
+FILE="dist/benotified-${VERSION}.zip"
 
 test -e "$FILE" && rm "$FILE"
 verbose zip "$FILE" -r \
