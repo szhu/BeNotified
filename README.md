@@ -1,8 +1,8 @@
-# Time to BeReal for Chrome
+# BeNotified
 
 _Desktop notifications for when it’s Time to BeReal!_
 
-Keeping your phone next to you when you’re working can be distracting! If you want to leave your phone across the room or on airplane mode but still want to know when it’s Time to BeReal, this (unofficial) Chrome extension can help.
+Keeping your phone next to you when you’re working can be distracting! If you’re a [BeReal](https://bereal.com/) user and want to leave your phone across the room or on airplane mode but still want to know when it’s ⚠️ Time to BeReal ⚠️, this (unofficial) Chrome extension can help.
 
 ![screenshot](docs/screenshot-v1.0.png)
 
@@ -43,4 +43,4 @@ This extension is currently hardcoded to use the Americas BeReal time zone, but 
 
 [File an issue here.][issues]
 
-[issues]: https://github.com/szhu/time-to-bereal-chrome/issues
+[issues]: https://github.com/szhu/BeNotified/issues

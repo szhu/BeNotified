@@ -164,7 +164,7 @@ function PopupUi() {
 
         El(...Fieldset, [
           El("div", {}, [
-            El("b", {}, ["Time to BeReal for Chrome"]),
+            El("b", {}, ["BeNotified for Chrome"]),
             [" by Sean Zhu"],
             El("br"),
             El("span", { style: { color: "#999" } }, [
@@ -178,7 +178,7 @@ function PopupUi() {
               style: InputStyle,
               async onClick() {
                 chrome.tabs.create({
-                  url: "https://github.com/szhu/time-to-bereal-chrome",
+                  url: "https://github.com/szhu/BeNotified",
                 });
               },
             },
@@ -191,7 +191,7 @@ function PopupUi() {
               style: InputStyle,
               async onClick() {
                 chrome.tabs.create({
-                  url: "https://github.com/szhu/time-to-bereal-chrome/issues",
+                  url: "https://github.com/szhu/BeNotified/issues",
                 });
               },
             },
