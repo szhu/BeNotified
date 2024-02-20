@@ -1,0 +1,17 @@
+{
+  "action": {
+    "default_popup": "src/popup.html"
+  },
+  "background": {
+    "service_worker": "src/background.js",
+    "type": "module"
+  },
+  "description": "Desktop notifications for when it's Time to BeReal!",
+  "icons": {
+    "128": "src/icon.png"
+  },
+  "manifest_version": 3,
+  "name": "Time to BeReal",
+  "permissions": ["alarms", "notifications", "storage"],
+  "version": "1.0"
+}
