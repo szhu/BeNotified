@@ -1,0 +1,12 @@
+{
+  "compilerOptions": {
+    "checkJs": true,
+    "esModuleInterop": true,
+    "forceConsistentCasingInFileNames": true,
+    "incremental": true,
+    "lib": ["dom", "es2018"],
+    "noEmit": true,
+    "noUncheckedIndexedAccess": true,
+    "strict": true
+  }
+}
