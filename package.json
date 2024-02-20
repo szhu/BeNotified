@@ -1,5 +1,8 @@
 {
   "private": true,
+  "scripts": {
+    "build": "sh scripts/build.sh"
+  },
   "dependencies": {
     "react": "^18.2.0",
     "react-dom": "^18.2.0"
