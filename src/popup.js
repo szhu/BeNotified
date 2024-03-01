@@ -123,7 +123,7 @@ function PopupUi() {
                   display: "inline-block",
                 },
                 async onClick() {
-                  window.alert(
+                  globalThis.alert(
                     "On the next page, click the API tab to request an API key.",
                   );
                   await chrome.tabs.create({

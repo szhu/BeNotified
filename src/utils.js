@@ -27,7 +27,12 @@ function makeSyncedItem(key, defaultValue) {
       value
         ? await chrome.storage.sync.set({ [key]: value })
         : await chrome.storage.sync.remove(key);
-      await chrome.runtime.sendMessage({ type: "storage-change", key, value });
+      await chrome.runtime
+        .sendMessage({ type: "storage-change", key, value })
+        .catch(() => {
+          // This is expected if there is only one frame in the extension;
+          // i.e. if the popup is closed.
+        });
     },
   };
 

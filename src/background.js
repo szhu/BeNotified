@@ -43,7 +43,7 @@ async function checkBerealApi() {
 
   if (!url) throw new Error("No API key set");
 
-  const response = await window.fetch(url);
+  const response = await globalThis.fetch(url);
   if (!response.ok) {
     await LastCheckError.set(await response.text());
     return;

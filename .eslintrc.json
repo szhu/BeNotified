@@ -80,7 +80,7 @@
     "no-empty": "warn",
     "no-restricted-globals": [
       "error",
-      // Require global variable names to be prefixed with `window.` This
+      // Require global variable names to be prefixed with `globalThis.` This
       // prevents people from, for example, using a variable called `name` when
       // they actually forgot to define it.
       //
@@ -132,7 +132,7 @@
       "toolbar",
       "top",
       "visualViewport",
-      // "window",
+      "window",
       "alert",
       "blur",
       "cancelIdleCallback",
