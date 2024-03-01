@@ -89,6 +89,19 @@ function PopupUi() {
           },
         },
 
+        lastMomentId &&
+          El(...Fieldset, [
+            El("div", {}, [
+              El("center", {}, [
+                "Latest Time to BeReal:",
+                El("br"),
+                El("div", { style: { fontSize: "3em" } }, [
+                  new Date(lastMomentId).toLocaleTimeString(),
+                ]),
+              ]),
+            ]),
+          ]),
+
         El(...Fieldset, [
           El(
             "label",
