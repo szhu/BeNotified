@@ -73,13 +73,22 @@ function sendNotification() {
   });
 }
 
+/**
+ * @param {string} dateString a string that looks like "2024-03-01 19:40:05".
+ */
+function parseMomentDate(dateString) {
+  return new Date(dateString + " UTC").toISOString();
+}
+
 async function checkBereal() {
   await LastCheckedAt.set(new Date().toISOString());
   await LastCheckError.set(undefined);
   const checkResponse = await checkBerealApi();
   if (!checkResponse) return;
 
-  await LastMomentId.set(checkResponse.regions["us-central"].id);
+  await LastMomentId.set(
+    parseMomentDate(checkResponse.regions["us-central"].utc),
+  );
 
   // If we have already shown this moment, don't show it again.
   if (LastMomentId.lastValue === (await ClosedMomentId.get())) return;
