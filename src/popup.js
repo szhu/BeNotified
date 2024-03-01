@@ -35,6 +35,7 @@ const InputStyle = /** @type {import("react").CSSProperties} */ ({
   border: "1px solid #999",
   padding: "0.4em 0.3em",
   borderRadius: "2px",
+  cursor: "pointer",
 });
 
 function PopupUi() {
@@ -96,6 +97,7 @@ function PopupUi() {
                 display: "flex",
                 alignItems: "center",
                 gap: "0.2em",
+                cursor: "pointer",
               },
             },
             [
@@ -159,8 +161,10 @@ function PopupUi() {
                 }
               }
             },
-            onFocus(event) {
-              event.currentTarget.select();
+            async onClick(event) {
+              const input = event.currentTarget;
+              await new Promise((resolve) => globalThis.setTimeout(resolve));
+              input.select();
             },
           }),
         ]),
