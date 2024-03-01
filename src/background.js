@@ -1,4 +1,5 @@
 import {
+  ClosedMomentAt,
   ClosedMomentId,
   LastCheckError,
   LastCheckedAt,
@@ -107,6 +108,7 @@ function register() {
     if (id === NotificationId) {
       const lastMomentId = LastMomentId.lastValue;
       await ClosedMomentId.set(lastMomentId);
+      await ClosedMomentAt.set(new Date().toISOString());
     }
   });
   chrome.runtime.onMessage.addListener(async (message) => {

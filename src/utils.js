@@ -115,3 +115,7 @@ export const ClosedMomentId = makeSyncedItem(
   "closed-moment-id",
   /** @type {string | undefined} */ (undefined),
 );
+export const ClosedMomentAt = makeSyncedItem(
+  "closed-moment-at",
+  /** @type {string | undefined} */ (undefined),
+);

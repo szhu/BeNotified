@@ -1,4 +1,5 @@
 import {
+  ClosedMomentAt,
   ClosedMomentId,
   LastCheckError,
   LastCheckedAt,
@@ -43,6 +44,7 @@ function PopupUi() {
   const [lastCheckError, setLastCheckError] = useSyncedState(LastCheckError);
   const [lastMomentId, setLastMomentId] = useSyncedState(LastMomentId);
   const [closedMomentId, setClosedMomentId] = useSyncedState(ClosedMomentId);
+  const [closedMomentAt, setClosedMomentAt] = useSyncedState(ClosedMomentAt);
 
   const [isDebugUiVisible, setIsShowDebugUiVisible] = React.useState(false);
 
@@ -239,6 +241,9 @@ function PopupUi() {
                 "Closed moment ID:",
                 closedMomentId ?? "None",
                 "",
+                "Closed moment at:",
+                closedMomentAt ?? "Never",
+                "",
               ].join("\n"),
             ),
             El(
@@ -272,6 +277,7 @@ function PopupUi() {
                   await setLastCheckError(undefined);
                   await setLastMomentId(undefined);
                   await setClosedMomentId(undefined);
+                  await setClosedMomentAt(undefined);
                 },
               },
               ["Reset"],
