@@ -37,7 +37,8 @@ Getting an API key from [bereal.devin.fun](https://bereal.devin.fun/) takes a wh
 
 ### Which time zone does this use?
 
-This extension is currently hardcoded to use the Americas BeReal time zone, but it would not be hard to add an option to change the time zone. Please [file an issue][issues] if you would like this.
+~~This extension is currently hardcoded to use the Americas BeReal time zone, but it would not be hard to add an option to change the time zone. Please [file an issue][issues] if you would like this.~~\
+You can now select any time zone, thanks to [PR #2](https://github.com/szhu/BeNotified/pull/2)!
 
 ### How do I report a bug?
 
