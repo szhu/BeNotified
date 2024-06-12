@@ -12,10 +12,12 @@ This extension is not affiliated with BeReal or devin.fun.
 
 ## How to install
 
-1. Click the green **Code** button, and click **Download ZIP**.
+1. Go to [Releases](https://github.com/szhu/BeNotified/releases) and download the latest `benotified-VERSION.zip` file.
 2. In Chrome, go to: `chrome://extensions`
 3. At the top-right, turn on **Developer mode**.
-4. Click **Load unpacked**, then choose the folder you just downloaded. (Alternatively, drag the folder into the Chrome tab.)
+4. Drag the zip file you just downloaded into the Chrome tab.
+
+To install for development, the steps are similar. Instead of downloading the release, `git clone` this repo and `yarn install` the dependencies. For the last step, drag the repo folder into the Chrome tab.
 
 ## FAQ
 
