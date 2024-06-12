@@ -97,6 +97,10 @@ export const SettingApiKey = makeSyncedItem(
   "setting-api-key",
   /** @type {string | undefined} */ (undefined),
 );
+export const SettingRegion = makeSyncedItem(
+  "setting-region",
+  /** @type {keyof CheckBerealResponse["regions"]} */ ("us-central"),
+);
 
 export const LastCheckedAt = makeSyncedItem(
   "last-checked-at",

@@ -6,6 +6,7 @@ import {
   LastMomentId,
   SettingApiKey,
   SettingIsOn,
+  SettingRegion,
 } from "./utils.js";
 
 const AlarmId = "main";
@@ -81,14 +82,13 @@ function parseMomentDate(dateString) {
 }
 
 async function checkBereal() {
+  const region = await SettingRegion.get();
   await LastCheckedAt.set(new Date().toISOString());
   await LastCheckError.set(undefined);
   const checkResponse = await checkBerealApi();
   if (!checkResponse) return;
 
-  await LastMomentId.set(
-    parseMomentDate(checkResponse.regions["us-central"].utc),
-  );
+  await LastMomentId.set(parseMomentDate(checkResponse.regions[region].utc));
 
   // If we have already shown this moment, don't show it again.
   if (LastMomentId.lastValue === (await ClosedMomentId.get())) return;
