@@ -6,6 +6,7 @@ import {
   LastMomentId,
   SettingApiKey,
   SettingIsOn,
+  SettingRegion,
   useSyncedState,
 } from "./utils.js";
 
@@ -41,6 +42,7 @@ const InputStyle = /** @type {import("react").CSSProperties} */ ({
 function PopupUi() {
   const [isOn, setIsOn] = useSyncedState(SettingIsOn);
   const [apiKey, setApiKey] = useSyncedState(SettingApiKey);
+  const [region, setRegion] = useSyncedState(SettingRegion);
   const [lastCheckedAt, setLastCheckedAt] = useSyncedState(LastCheckedAt);
   const [lastCheckError, setLastCheckError] = useSyncedState(LastCheckError);
   const [lastMomentId, setLastMomentId] = useSyncedState(LastMomentId);
@@ -180,6 +182,30 @@ function PopupUi() {
               input.select();
             },
           }),
+        ]),
+
+        El(...Fieldset, [
+          El("label", {}, ["Time Zone"]),
+          El(
+            "select",
+            {
+              style: InputStyle,
+              value: region,
+              async onChange(
+                /** @type {React.ChangeEvent<HTMLSelectElement>} */ event,
+              ) {
+                await setRegion(
+                  /** @type {BerealRegionId} */ (event.currentTarget.value),
+                );
+              },
+            },
+            [
+              El("option", { value: "us-central" }, "Americas"),
+              El("option", { value: "europe-west" }, "Europe"),
+              El("option", { value: "asia-west" }, "West Asia"),
+              El("option", { value: "asia-east" }, "East Asia"),
+            ],
+          ),
         ]),
 
         El(...Fieldset, [
