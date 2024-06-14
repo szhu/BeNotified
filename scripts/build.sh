@@ -1,3 +1,4 @@
+#!/bin/bash
 set -e
 
 verbose() {
@@ -12,7 +13,7 @@ mkdir -p dist
 FILE="dist/benotified-${VERSION}.zip"
 
 test -e "$FILE" && rm "$FILE"
-verbose zip "$FILE" -r \
+verbose zip "$FILE" --must-match --recurse-paths \
   manifest.json \
   src \
   node_modules/react/umd/react.production.min.js \
